@@ -787,53 +787,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610854643}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &620119559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 620119560}
-  - component: {fileID: 620119561}
-  m_Layer: 0
-  m_Name: ObjectPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &620119560
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620119559}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &620119561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620119559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bdcb8067206c2c4d96233941fffeccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolSize: 4
-  enemyPrefab: {fileID: 8055228111630715758, guid: 3c5184bcc85705045a96ff8784e05238, type: 3}
-  decoyPrefab: {fileID: 5352886237399419626, guid: fad699cb3a85f2142a2e96727c7bcd8f, type: 3}
 --- !u!1 &637607027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,10 +997,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 801616908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5e622feb95caa4f937f1710345dbf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 70706bb46012a8045adf14fd658c93e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPool: {fileID: 620119561}
+  enemyPrefab: {fileID: 3717374531123039222, guid: e1392ff29c03a4048bff1b0871a94e19, type: 3}
+  decoyPrefab: {fileID: 4449152302978002698, guid: 0fbead11a2b7cc6499e10aaaf070061b, type: 3}
 --- !u!1 &855836899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +2661,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1113187163}
   - {fileID: 801616909}
-  - {fileID: 620119560}
   - {fileID: 1120007405}
   - {fileID: 356660985}
   - {fileID: 1476204230}

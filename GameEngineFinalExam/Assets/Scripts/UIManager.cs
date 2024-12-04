@@ -43,6 +43,7 @@ public class UIManager : Singleton<UIManager>
     private void GameOver()
     {
         gameOverText.SetActive(true);
-        GameObject.Find("Spawner").GetComponent<Spawner>().CancelInvoke();
+        if (GameObject.Find("Spawner").GetComponent<Spawner>() == null) GameObject.Find("Spawner").GetComponent<BadSpawner>().CancelInvoke();
+        else GameObject.Find("Spawner").GetComponent<Spawner>().CancelInvoke();
     }
 }

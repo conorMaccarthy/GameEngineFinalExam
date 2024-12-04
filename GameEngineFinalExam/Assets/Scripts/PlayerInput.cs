@@ -60,7 +60,8 @@ public class PlayerInput : MonoBehaviour
                 enemy.transform.position.y > transform.position.y - 1 && enemy.transform.position.y < transform.position.y + 1)
             {
                 UIManager.instance.UpdateScore(100);
-                enemy.GetComponent<EnemyBehavior>().Deactivate();
+                if (enemy.GetComponent<EnemyBehavior>() == null) enemy.GetComponent<BadEnemyBehavior>().Deactivate();
+                else enemy.GetComponent<EnemyBehavior>().Deactivate();
                 missed = false;
             }
         }

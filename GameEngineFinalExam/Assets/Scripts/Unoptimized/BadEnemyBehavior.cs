@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+public class BadEnemyBehavior : MonoBehaviour
 {
-    private PooledObject pooledObject;
-
-    private void Awake()
-    {
-        pooledObject = GetComponent<PooledObject>();
-    }
-
     public void BeginMoving()
     {
         StartCoroutine(Movement());
@@ -47,7 +40,6 @@ public class EnemyBehavior : MonoBehaviour
     IEnumerator DeactivateSequence()
     {
         yield return null;
-        pooledObject.ReturnToPool();
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
